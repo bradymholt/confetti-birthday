@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday Kam</title>
-    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap"
+      rel="stylesheet"
+    />
     <style>
       html,
       body {
@@ -22,23 +25,28 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        font-family: "Homemade Apple", cursive;
+        text-align: center;
+        line-height: 4em;        
+        font-size: 2rem;
+        color: #c45944;
+        animation: fadein 4s forwards;
       }
 
-      h1 {
-        font-family: 'Homemade Apple', cursive;
-        color: #c45944;
-        line-height: 4rem;
-        text-align: center;
-        animation: fadein 3.5s forwards;
-        
+      .emoji {
+        font-size: 2em;
       }
+
+      h2 {
+        font-size: 0.7em;
+      }
+
       @keyframes fadein {
         from {
           opacity: 0;
         }
         to {
           opacity: 1;
-          font-size: 50px;
         }
       }
     </style>
@@ -204,7 +212,11 @@
   </head>
   <body>
     <div class="text">
-      <h1>Happy Birthday Kam!<br />🎉🍰🎈</h1>
+      <div>
+        <h1>Happy Birthday Kam!</h1>
+        <div class="emoji">🎉🍰🎈</div>
+        <h2>-Brady</h2>
+      </div>
     </div>
     <canvas id="target"></canvas>
   </body>
