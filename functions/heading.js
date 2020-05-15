@@ -1,9 +1,7 @@
-const headingMap = {
-  "030a66ac": "Happy Birthday Brady!",
-};
+const headingMap = new Map([["030a66ac", "Happy Birthday Brady!"]]);
 
 exports.handler = function (event, context, callback) {
-  const heading =  headingMap["030a66ac"];
+  const heading = headingMap.get("030a66ac");
   callback(null, {
     statusCode: 200,
     headers: {
