@@ -1,4 +1,8 @@
-const queryNameMap = new Map([["030a66ac", "Brady"]]);
+const queryNameMap = new Map([
+  ["030a66ac", "Brady"],
+  ["6b1e852a", "Nate"],
+  ["af69e6sg", "Angela"]
+]);
 
 exports.handler = function (event, context, callback) {
   const name = queryNameMap.get(event.queryStringParameters["id"]) || "";
