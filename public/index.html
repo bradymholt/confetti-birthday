@@ -210,8 +210,9 @@
       }
 
       async function populateHeading() {
+        const query = window.location.hash.substr(1);
         const response = await fetch(
-          "https://ynab-happy-birthday.netlify.app/.netlify/functions/heading"
+          `https://ynab-happy-birthday.netlify.app/.netlify/functions/heading?${query}`
         );
         const data = await response.json();
         document.getElementById("heading").innerText = data.heading;
