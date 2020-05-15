@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday Sebastian</title>
+    <title>Happy Birthday</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap"
       rel="stylesheet"
@@ -27,7 +27,7 @@
         height: 100vh;
         font-family: "Homemade Apple", cursive;
         text-align: center;
-        line-height: 4em;        
+        line-height: 4em;
         font-size: 2rem;
         color: #c45944;
         animation: fadein 4s forwards;
@@ -51,7 +51,7 @@
       }
     </style>
     <script>
-      window.addEventListener("DOMContentLoaded", function () {
+      function animate() {
         // Confetti Animation Source: https://codepen.io/linrock/pen/Amdhr
         (function () {
           var COLORS,
@@ -207,13 +207,28 @@
 
           step();
         }.call(this));
+      }
+
+      async function populateName() {
+        const response = await fetch(
+          "https://ynab-happy-birthday.netlify.app/.netlify/functions/hello"
+        );
+        const data = await response.json();
+        document.getElementsByTagName(
+          "h1"
+        )[0].innerText = `Happy Birthday ${data.name}`;
+      }
+
+      window.addEventListener("DOMContentLoaded", function () {
+        populateName();
+        animate();
       });
     </script>
   </head>
   <body>
     <div class="text">
       <div>
-        <h1>Happy Birthday Sebastian!</h1>
+        <h1><!-- Placeholder --></h1>
         <div class="emoji">🎉🍰🎈</div>
         <h2>-Brady</h2>
       </div>
