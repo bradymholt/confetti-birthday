@@ -209,18 +209,16 @@
         }.call(this));
       }
 
-      async function populateName() {
+      async function populateHeading() {
         const response = await fetch(
-          "https://ynab-happy-birthday.netlify.app/.netlify/functions/hello"
+          "https://ynab-happy-birthday.netlify.app/.netlify/functions/heading"
         );
         const data = await response.json();
-        document.getElementsByTagName(
-          "h1"
-        )[0].innerText = `Happy Birthday ${data.name}`;
+        document.getElementById("heading").innerText = data.heading;
       }
 
-      window.addEventListener("DOMContentLoaded", function () {
-        populateName();
+      window.addEventListener("DOMContentLoaded", async () => {
+        populateHeading();
         animate();
       });
     </script>
@@ -228,7 +226,7 @@
   <body>
     <div class="text">
       <div>
-        <h1><!-- Placeholder --></h1>
+        <h1 id="heading"><!-- Placeholder --></h1>
         <div class="emoji">🎉🍰🎈</div>
         <h2>-Brady</h2>
       </div>
