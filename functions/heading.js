@@ -3,7 +3,7 @@ const headingMap = {
 };
 
 exports.handler = function (event, context, callback) {
-  const heading =  headingMap("030a66ac");
+  const heading =  headingMap["030a66ac"];
   callback(null, {
     statusCode: 200,
     headers: {
