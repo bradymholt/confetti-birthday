@@ -210,10 +210,10 @@
       }
 
       async function populateHeading() {
-        // Grab hash for query
-        const query = window.location.hash.substr(1);
-        // Remove hash
-        history.replaceState(null, null, ' ');
+        // Grab search query
+        const query = window.location.search.substr(1);
+        // Remove search query
+        history.replaceState(null, null, window.location.pathname);
 
         const response = await fetch(
           `https://ynab-happy-birthday.netlify.app/.netlify/functions/heading?${query}`
