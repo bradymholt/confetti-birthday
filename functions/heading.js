@@ -1,7 +1,8 @@
 const queryNameMap = new Map([
   ["030a66ac", "Brady"],
   ["6b1e852a", "Nate"],
-  ["af69e6sg", "Angela"]
+  ["af69e6sg", "Angela"],
+  ["0b8391e0", "Kevin"]
 ]);
 
 exports.handler = function (event, context, callback) {
