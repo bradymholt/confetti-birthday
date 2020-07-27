@@ -1,4 +1,4 @@
-exports.queryMessageMap = new Map([
+const queryMessageMap = new Map([
   ["030a66ac", "Happy Birthday Brady!"],
   ["6b1e852a", "Happy Birthday Nate!"],
   ["af69e6sg", "Happy Birthday Angela!"],
@@ -17,7 +17,7 @@ exports.queryMessageMap = new Map([
   ["4ba477ee", "Happy Birthday Ryan!"],
 ]);
 
-exports.handler = function (event, context, callback) {
+const handler = function (event, context, callback) {
   const message = queryMessageMap.get(event.queryStringParameters["id"]) || "";
   const heading = `${message}`;
   callback(null, {
@@ -28,4 +28,9 @@ exports.handler = function (event, context, callback) {
     },
     body: JSON.stringify({ heading }),
   });
+};
+
+module.exports = {
+  queryMessageMap,
+  handler
 };
