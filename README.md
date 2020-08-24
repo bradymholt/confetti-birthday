@@ -12,4 +12,4 @@ This app is deployed on Netify on http://ynab-happy-birthday.netlify.app.
 
 ### QR Code Generation
 
-Run `npx qrcode -o "/Users/bholt/Desktop/emily.png" http://ynab-happy-birthday.netlify.app/\?id\=5e2017b0`
+Run `./qrcodes-generate.js` and the QR codes will be places in ./qrcodes
