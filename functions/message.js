@@ -23,7 +23,7 @@ const queryMessageMap = new Map([
   ["1ebec569", "Emily is Super Awesome.  Happy Birthday!!!!"], // Emily M
   ["52d4fa5c", "Happy Birthday Carlos!"],
   ["9b23ad16", "Happy Birthday Emily!"], // Emily H
-
+  ["9b23ad16", "Lindsey is da' bomb!"],
 ]);
 
 const handler = function (event, context, callback) {
@@ -41,5 +41,5 @@ const handler = function (event, context, callback) {
 
 module.exports = {
   queryMessageMap,
-  handler
+  handler,
 };
