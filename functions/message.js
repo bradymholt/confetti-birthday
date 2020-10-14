@@ -33,6 +33,8 @@ const queryMessageMap = new Map([
   ["536a8e11", "Happy Birthday Melissa!"],
   ["9a8975ef", "Happy Birthday Neal!"],
   ["8bcfebb7", "Happy Birthday Jorge!"],
+  ["3748a5fe", "Happy Birthday Chance!"],
+  ["7c972873", "Happy Birthday Emma!"],  
 ]);
 
 const handler = function (event, context, callback) {
