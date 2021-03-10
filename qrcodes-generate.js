@@ -2,6 +2,8 @@
 
 const codes = require("./functions/message").queryMessageMap;
 
+exec("mkdir -p  ./qrcodes/")
+
 for (let [key, value] of codes) {
   const fileName = value.replace(/\!/g, "").replace(/\s/g, "_").toLowerCase();
   exec(`npx qrcode -o "qrcodes/${fileName}.png" http://ynab-happy-birthday.netlify.app/\?id\=${key}`)
